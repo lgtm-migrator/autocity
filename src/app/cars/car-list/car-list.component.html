@@ -1,0 +1,17 @@
+<li>
+  <ul *ngFor="let carro of carros">
+    <a>
+      <button class="btn btn-outline-info shadow">
+        {{carro.id}} {{carro.nombre}}
+      </button>
+    </a>
+  </ul>
+</li>
+
+<form #form="ngForm" (ngSubmit)="insertNewCar()">
+  <label for="nombre"><strong>Nombre </strong></label>
+  <input class="form-control shadow-sm" type="text" placeholder="Nombre del carro" name="nombre" [(ngModel)]="car.nombre">
+
+  <button class="btn btn-success shadow mt-3" (click)="insertNewCar()">Agregar carro</button>
+</form>
+
