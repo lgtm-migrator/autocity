@@ -1,0 +1,64 @@
+<h1 class="text-center" style="margin-bottom: 100px">Edit service</h1>
+<form #form="ngForm" (ngSubmit)="updateService(model)">
+  <div class="form-group row">
+    <label for="id" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+      >id</label
+    >
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+        class="form-control shadow-sm"
+        type="text"
+        name="id"
+        autocomplete="off"
+        [(ngModel)]="model.id"
+        placeholder="id"
+        disabled
+      />
+    </div>
+
+    <label for="name" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+      >name</label
+    >
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+        class="form-control shadow-sm"
+        type="text"
+        name="name"
+        autocomplete="off"
+        [(ngModel)]="model.name"
+        placeholder="name"
+      />
+    </div>
+
+    <label for="description" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+      >description</label
+    >
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+        class="form-control shadow-sm"
+        type="text"
+        name="description"
+        autocomplete="off"
+        [(ngModel)]="model.description"
+        placeholder="description"
+      />
+    </div>
+
+    <label for="price" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+      >price</label
+    >
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+        class="form-control shadow-sm"
+        type="text"
+        name="price"
+        autocomplete="off"
+        [(ngModel)]="model.price"
+        placeholder="price"
+      />
+    </div>
+  </div>
+
+  <button class="btn btn-success shadow me-2">Update</button>
+  
+</form>

@@ -1,0 +1,94 @@
+<h2 class="text-center">Editar taller</h2>
+<form #form="ngForm" (ngSubmit)="updateShop(shop)">
+  <div class="form-group row">
+    <label for="id" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+      >Id</label
+    >
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+        class="form-control shadow-sm"
+        type="text"
+        name="id"
+        autocomplete="off"
+        [(ngModel)]="shop.id"
+        placeholder="Id"
+        disabled
+      />
+    </div>
+
+    <label for="name" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+      >Name</label
+    >
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+        class="form-control shadow-sm"
+        type="text"
+        name="Name"
+        autocomplete="off"
+        [(ngModel)]="shop.name"
+        placeholder="Name"
+      />
+    </div>
+
+    <label for="address" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+      >Address</label
+    >
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+        class="form-control shadow-sm"
+        type="text"
+        name="address"
+        autocomplete="off"
+        [(ngModel)]="shop.address"
+        placeholder="Address"
+      />
+    </div>
+
+    <label for="rating" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+      >Rating</label
+    >
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+        class="form-control shadow-sm"
+        type="text"
+        name="rating"
+        autocomplete="off"
+        [(ngModel)]="shop.rating"
+        placeholder="Rating"
+      />
+    </div>
+
+    <label for="longitude" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+      >longitude</label
+    >
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+        class="form-control shadow-sm"
+        type="text"
+        name="longitude"
+        autocomplete="off"
+        [(ngModel)]="shop.longitude"
+        placeholder="longitude"
+      />
+    </div>
+
+    <label for="latitude" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+      >latitude</label
+    >
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+        class="form-control shadow-sm"
+        type="text"
+        name="latitude"
+        autocomplete="off"
+        [(ngModel)]="shop.latitude"
+        placeholder="latitude"
+      />
+    </div>
+
+
+  </div>
+
+  <button class="btn btn-success shadow me-2">Update</button>
+
+</form>

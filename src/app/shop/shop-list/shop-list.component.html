@@ -1,0 +1,37 @@
+<h2>Shops</h2>
+
+<div class="tab-panel shadow-sm">
+  <tabset class="member-tabset">
+    <tab heading="Shops">
+      <div class="container">
+        <div class="row">
+          <table class="table">
+            <tr>
+              <th style="width: 10%">Id</th>
+              <th style="width: 30%">name</th>
+              <th style="width: 30%">address</th>
+              <th style="width: 20%">rating</th>
+              <th style="width: 10%">
+              </th>
+            </tr>
+            <tr *ngFor="let item of model">
+              <td>{{ item.id }}</td>
+              <td>{{ item.name }}</td>
+              <td>{{ item.address }}</td>
+              <td>{{ item.rating }}</td>
+              <td>
+                <a routerLink="/Shops/{{item.id}}">
+                  <button class="btn btn-info shadow-sm">Ir</button>
+                </a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </tab>
+  </tabset>
+</div>
+
+<a routerLink="/Shop/New">
+  <button class="btn btn-success shadow mt-2">Agregar Taller</button>
+</a>

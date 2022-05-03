@@ -1,0 +1,98 @@
+<h2 class="text-center" style="margin-bottom: 50px">Detalle del vehículo</h2>
+
+<form>
+  <div class="form-group row">
+    <label for="id" class="col-sm-2 col-form-label text-end mt-2 mb-2">Id</label>
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+      class="form-control shadow-sm"
+      type="text"
+      name="id"
+      autocomplete="off"
+      [(ngModel)]="model.id"
+      placeholder="Id"
+      disabled
+      />
+    </div>
+
+    <label for="customerId" class="col-sm-2 col-form-label text-end mt-2 mb-2">Customer Id</label>
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+      class="form-control shadow-sm"
+      type="text"
+      name="customerId"
+      autocomplete="off"
+      [(ngModel)]="model.customer.id"
+      placeholder="Customer Id"
+      disabled
+      />
+    </div>
+
+    <label for="customerName" class="col-sm-2 col-form-label text-end mt-2 mb-2">Owner</label>
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+      class="form-control shadow-sm"
+      type="text"
+      name="customerName"
+      autocomplete="off"
+      [(ngModel)]="model.customer.name"
+      placeholder="Owner"
+      disabled
+      />
+    </div>
+
+    <label for="brand" class="col-sm-2 col-form-label text-end mt-2 mb-2">Brand</label>
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+      class="form-control shadow-sm"
+      type="text"
+      name="brand"
+      autocomplete="off"
+      [(ngModel)]="model.brand"
+      placeholder="Brand"
+      disabled
+      />
+    </div>
+
+    <label for="model" class="col-sm-2 col-form-label text-end mt-2 mb-2">Model</label>
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+      class="form-control shadow-sm"
+      type="text"
+      name="model"
+      autocomplete="off"
+      [(ngModel)]="model.model"
+      placeholder="Model"
+      disabled
+      />
+    </div>
+
+    <label for="year" class="col-sm-2 col-form-label text-end mt-2 mb-2">Year</label>
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+      class="form-control shadow-sm"
+      type="text"
+      name="year"
+      autocomplete="off"
+      [(ngModel)]="model.year"
+      placeholder="Year"
+      disabled
+      />
+    </div>
+  </div>
+</form>
+
+<div class="container" style="margin-top: 30px">
+  <a routerLink="/Cars">
+    <button class="btn btn-secondary shadow me-2">Atras</button>
+  </a>
+  <a routerLink="/Car/Edit/{{ model.id }}">
+    <button class="btn btn-info shadow me-2">Editar</button>
+  </a>
+  <button class="btn btn-danger shadow me-2" (click)="borrar(model.id)">
+    Borrar
+  </button>
+  <a routerLink="/Historial/{{ model.id }}">
+    <button class="btn btn-warning me-2 shadow">Historial</button>
+  </a>
+</div>

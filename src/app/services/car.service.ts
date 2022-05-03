@@ -11,11 +11,24 @@ export class CarService {
 
   constructor(private http: HttpClient) { }
 
-  getAllCars(): Observable<Car[]>{
+  getAllCars(): Observable<Car[]> {
     return this.http.get<Car[]>(this.baseUrl);
   }
 
-  postNewCar(car: Car): Observable<Car>{
-    return this.http.post<Car>(this.baseUrl, car);
+  getOneCar(id: string): Observable<Car> {
+    return this.http.get<Car>(this.baseUrl + '/' + id);
   }
+
+  postNewCar(model: any) {
+    return this.http.post(this.baseUrl, model);
+  }
+
+  deleteCar(id: string): Observable<Car> {
+    return this.http.delete<Car>(this.baseUrl + '/' + id);
+  }
+
+  updateCar(car: Car) {
+    return this.http.put(this.baseUrl + '/' + car.id, car);
+  }
+
 }

@@ -9,10 +9,30 @@ import { CarListComponent } from './cars/car-list/car-list.component';
 import { FormsModule } from '@angular/forms';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
-import { TableComponent } from './table/table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { ToastrModule } from 'ngx-toastr';
+import { CarDetailComponent } from './cars/car-detail/car-detail.component';
+import { CarEditComponent } from './cars/car-edit/car-edit.component';
+import { CarNewComponent } from './cars/car-new/car-new.component';
+import { HistorialDetailComponent } from './historial/historial-detail/historial-detail.component';
+import { ShopListComponent } from './shop/shop-list/shop-list.component';
+import { ShopDetailComponent } from './shop/shop-detail/shop-detail.component';
+import { EventNewComponent } from './event/event-new/event-new.component';
+import { EventListComponent } from './event/event-list/event-list.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { ShopNewComponent } from './shop/shop-new/shop-new.component';
+import { ShopEditComponent } from './shop/shop-edit/shop-edit.component';
+import { ServicioNewComponent } from './servicios/servicio-new/servicio-new.component';
+import { ServicioEditComponent } from './servicios/servicio-edit/servicio-edit.component';
+import { CustomerListComponent } from './customer/customer-list/customer-list.component';
+import { CustomerDetailComponent } from './customer/customer-detail/customer-detail.component';
+import { CustomerNewComponent } from './customer/customer-new/customer-new.component';
+import { CustomerEditComponent } from './customer/customer-edit/customer-edit.component';
+import { EventDetailComponent } from './event/event-detail/event-detail.component';
+import { EventEditComponent } from './event/event-edit/event-edit.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +40,24 @@ import { MatSortModule } from '@angular/material/sort';
     CarListComponent,
     NavComponent,
     HomeComponent,
-    TableComponent
+    CarDetailComponent,
+    CarEditComponent,
+    CarNewComponent,
+    HistorialDetailComponent,
+    ShopListComponent,
+    ShopDetailComponent,
+    EventNewComponent,
+    EventListComponent,
+    ShopNewComponent,
+    ShopEditComponent,
+    ServicioNewComponent,
+    ServicioEditComponent,
+    CustomerListComponent,
+    CustomerDetailComponent,
+    CustomerNewComponent,
+    CustomerEditComponent,
+    EventDetailComponent,
+    EventEditComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +67,12 @@ import { MatSortModule } from '@angular/material/sort';
     FormsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right'
+    }),
+    TabsModule.forRoot(),
+    BsDropdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

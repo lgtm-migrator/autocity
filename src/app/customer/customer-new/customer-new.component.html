@@ -1,0 +1,43 @@
+<h1 class="text-center">Nuevo Carro</h1>
+
+<form #form="ngForm" (ngSubmit)="addCustomer()">
+  <div class="container">
+    <input
+      class="form-control shadow-sm mt-3"
+      type="text"
+      name="customerId"
+      autocomplete="off"
+      [(ngModel)]="model.customerId"
+      placeholder="Customer Id"
+    />
+
+    <input
+      class="form-control shadow-sm mt-3"
+      type="text"
+      name="brand"
+      autocomplete="off"
+      [(ngModel)]="model.brand"
+      placeholder="Brand"
+    />
+
+    <input
+      class="form-control shadow-sm mt-3"
+      type="text"
+      name="model"
+      autocomplete="off"
+      [(ngModel)]="model.model"
+      placeholder="Model"
+    />
+
+    <input
+      class="form-control shadow-sm mt-3"
+      type="text"
+      name="year"
+      autocomplete="off"
+      [(ngModel)]="model.year"
+      placeholder="Year"
+    />
+  </div>
+
+  <button class="btn btn-success shadow-sm me-2 mt-3">Add car</button>
+</form>

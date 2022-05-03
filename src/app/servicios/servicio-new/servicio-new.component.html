@@ -1,0 +1,48 @@
+<h1 class="text-center">Nuevo Servicio de {{shopName.name}}</h1>
+
+<form #form="ngForm" (ngSubmit)="addService()">
+  <div class="container">
+
+    <input
+    class="form-control shadow-sm mt-3"
+    type="text"
+    name="shopId"
+    autocomplete="off"
+    [(ngModel)]="service.shopId"
+    placeholder="Shop Id"
+    disabled
+    />
+
+    <input
+    class="form-control shadow-sm mt-3"
+    type="text"
+    name="name"
+    autocomplete="off"
+    [(ngModel)]="service.name"
+    placeholder="Name"
+    />
+
+    <input
+    class="form-control shadow-sm mt-3"
+    type="text"
+    name="description"
+    autocomplete="off"
+    [(ngModel)]="service.description"
+    placeholder="Description"
+    />
+
+    <input
+    class="form-control shadow-sm mt-3"
+    type="text"
+    name="price"
+    autocomplete="off"
+    [(ngModel)]="service.price"
+    placeholder="Price"
+    value=""
+    />
+
+  </div>
+
+    <button class="btn btn-success shadow-sm me-2 mt-2">Agregar</button>
+
+</form>

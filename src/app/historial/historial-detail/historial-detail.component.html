@@ -1,0 +1,19 @@
+<h1 class="text-center" style="margin-bottom: 50px;">Historial de servicios</h1>
+
+<div *ngFor="let his of model" class="btn-group-justified mb-2 mt-2">
+  <a>
+    <button class="btn btn-outline-dark shadow">
+      {{ his.id }}
+    </button>
+    <button class="btn btn-secondary shadow">
+      {{ his.detail }}
+    </button>
+    <button class="btn btn-warning shadow">
+      {{ his.date }}
+    </button>
+  </a>
+</div>
+
+<a routerLink="/Cars">
+  <button class="btn btn-info shadow">Atras</button>
+</a>

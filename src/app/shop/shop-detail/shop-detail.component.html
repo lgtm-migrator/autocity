@@ -1,0 +1,180 @@
+<h2>Servicios de {{ model.name }}</h2>
+
+<div class="tab-panel shadow-sm">
+  <tabset class="member-tabset">
+    <tab heading="Available services">
+      <div class="container">
+        <div class="row">
+          <table class="table">
+            <tr>
+              <th style="width: 10%">Id</th>
+              <th style="width: 20%">Name</th>
+              <th style="width: 50%">Detail</th>
+              <th style="width: 10%">Price</th>
+              <th style="width: 10%">Actions</th>
+            </tr>
+            <tr *ngFor="let servicio of servicios">
+              <td>{{ servicio.id }}</td>
+              <td>{{ servicio.name }}</td>
+              <td>{{ servicio.description }}</td>
+              <td>{{ servicio.price }} MXN</td>
+              <td>
+                <div class="btn-group">
+                  <a routerLink="/Event/New">
+                    <button class="btn btn-info shadow-sm">Hire</button>
+                  </a>
+                  <a routerLink="/Shop/Services/{{ servicio.id }}">
+                    <button class="btn btn-outline-info shadow-sm">Edit</button>
+                  </a>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </tab>
+  </tabset>
+</div>
+
+<!-- <div class="row mt-5">
+  <div class="col-3" *ngFor="let review of reviews">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h4 class="card-title text-center">
+          {{ review.title }}
+        </h4>
+        <h6 class="card-subtitle mb-2 text-muted">
+          {{ review.customer.name }}
+        </h6>
+        <p class="card-text mb-2">
+          {{ review.description }}
+        </p>
+        <p class="card-text">
+          <strong>Calificacion</strong> {{ review.score }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="card mt-2 mb-2">
+  <div class="card-body p-1">reviews</div>
+</div>
+
+<div class="card mt-2 mb-2">
+  <div class="card-body p-2">
+    <div class="card-title text-center">Información del taller</div>
+    <form>
+      <div class="form-group row">
+        <label for="id" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+          >Id</label
+        >
+        <div class="col-sm-10 mt-2 mb-2">
+          <input
+            class="form-control shadow-sm"
+            type="text"
+            name="id"
+            autocomplete="off"
+            [(ngModel)]="model.id"
+            placeholder="Id"
+            disabled
+          />
+        </div>
+
+        <label for="name" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+          >Name</label
+        >
+        <div class="col-sm-10 mt-2 mb-2">
+          <input
+            class="form-control shadow-sm"
+            type="text"
+            name="name"
+            autocomplete="off"
+            [(ngModel)]="model.name"
+            placeholder="Name"
+            disabled
+          />
+        </div>
+
+        <label for="address" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+          >Address</label
+        >
+        <div class="col-sm-10 mt-2 mb-2">
+          <input
+            class="form-control shadow-sm"
+            type="text"
+            name="address"
+            autocomplete="off"
+            [(ngModel)]="model.address"
+            placeholder="Address"
+            disabled
+          />
+        </div>
+
+        <label for="rating" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+          >Rating</label
+        >
+        <div class="col-sm-10 mt-2 mb-2">
+          <input
+            class="form-control shadow-sm"
+            type="text"
+            name="rating"
+            autocomplete="off"
+            [(ngModel)]="model.rating"
+            placeholder="Rating"
+            disabled
+          />
+        </div>
+
+        <label
+          for="longitude"
+          class="col-sm-2 col-form-label text-end mt-2 mb-2"
+          >Longitude</label
+        >
+        <div class="col-sm-10 mt-2 mb-2">
+          <input
+            class="form-control shadow-sm"
+            type="text"
+            name="longitude"
+            autocomplete="off"
+            [(ngModel)]="model.longitude"
+            placeholder="Longitude"
+            disabled
+          />
+        </div>
+
+        <label for="latitude" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+          >Latitude</label
+        >
+        <div class="col-sm-10 mt-2 mb-2">
+          <input
+            class="form-control shadow-sm"
+            type="text"
+            name="latitude"
+            autocomplete="off"
+            [(ngModel)]="model.latitude"
+            placeholder="Latitude"
+            disabled
+          />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="container mt-3">
+  <a routerLink="/Shops">
+    <button class="btn btn-secondary shadow me-2">Atras</button>
+  </a>
+  <a routerLink="/Shop/Edit/{{ model.id }}">
+    <button class="btn btn-info shadow me-2">Editar</button>
+  </a>
+  <button class="btn btn-danger shadow me-2" (click)="borrar(model.id)">
+    Borrar
+  </button>
+  <a routerLink="/Service/New/{{ model.id }}">
+    <button class="btn btn-success shadow me-2" (click)="agregar()">
+      Agregar Servicio
+    </button>
+  </a>
+</div>

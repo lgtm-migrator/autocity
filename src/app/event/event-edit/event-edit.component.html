@@ -1,0 +1,95 @@
+<h2 class="text-center">Editar cita</h2>
+
+<form #form="ngForm" (ngSubmit)="actualizarCita(model)">
+  <div class="form-group row">
+    <label for="id" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+      >Id</label
+    >
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+        class="form-control shadow-sm"
+        type="text"
+        name="id"
+        autocomplete="off"
+        [(ngModel)]="cita.id"
+        placeholder="Id"
+        disabled
+      />
+    </div>
+
+    <label for="name" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+      >Name</label
+    >
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+        class="form-control shadow-sm"
+        type="text"
+        name="name"
+        autocomplete="off"
+        [(ngModel)]="cita.name"
+        placeholder="Name"
+      />
+    </div>
+
+    <label for="date" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+      >Date</label
+    >
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+        class="form-control shadow-sm"
+        type="text"
+        name="date"
+        autocomplete="off"
+        [(ngModel)]="cita.date"
+        placeholder="Date"
+      />
+    </div>
+
+    <label for="time" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+      >Time</label
+    >
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+        class="form-control shadow-sm"
+        type="text"
+        name="time"
+        autocomplete="off"
+        [(ngModel)]="cita.time"
+        placeholder="Time"
+      />
+    </div>
+
+    <h3 class="text-center">Servicio</h3>
+
+    <label for="serviceId" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+      >Id</label
+    >
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+        class="form-control shadow-sm"
+        type="text"
+        name="serviceId"
+        autocomplete="off"
+        [(ngModel)]="cita.servicioId"
+        placeholder="Id"
+      />
+    </div>
+
+    <h3 class="text-center">Vehículo</h3>
+
+    <label for="carId" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+      >Id</label
+    >
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+        class="form-control shadow-sm"
+        type="text"
+        name="carId"
+        autocomplete="off"
+        [(ngModel)]="cita.carId"
+        placeholder="Id"
+      />
+    </div>
+  </div>
+  <button class="btn btn-success shadow me-2 mt-2">Update</button>
+</form>

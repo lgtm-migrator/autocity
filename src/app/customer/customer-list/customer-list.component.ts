@@ -4,21 +4,21 @@ import { Car } from 'src/app/models/car.model';
 import { CarService } from 'src/app/services/car.service';
 
 @Component({
-  selector: 'app-car-list',
-  templateUrl: './car-list.component.html',
-  styleUrls: ['./car-list.component.css']
+  selector: 'app-customer-list',
+  templateUrl: './customer-list.component.html',
+  styleUrls: ['./customer-list.component.css']
 })
-export class CarListComponent implements OnInit {
+export class CustomerListComponent implements OnInit {
   carros: Car[];
   model: any = {};
 
   constructor(private carService: CarService, private toastr:ToastrService) { }
 
   ngOnInit(): void {
-    this.showAllCars();
+    this.showAllCustomers();
   }
 
-  showAllCars(){
+  showAllCustomers(){
     this.carService.getAllCars().subscribe(response => {
       console.log(response);
       this.carros = response;
@@ -26,5 +26,6 @@ export class CarListComponent implements OnInit {
       console.log(error);
     })
   }
+
 
 }

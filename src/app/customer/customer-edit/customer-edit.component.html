@@ -1,0 +1,93 @@
+<h1 class="text-center" style="margin-bottom: 100px">Editar carro</h1>
+<form #form="ngForm" (ngSubmit)="updateCustomer(car)">
+  <div class="form-group row">
+    <label for="id" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+      >Id</label
+    >
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+        class="form-control shadow-sm"
+        type="text"
+        name="id"
+        autocomplete="off"
+        [(ngModel)]="car.id"
+        placeholder="Id"
+        disabled
+      />
+    </div>
+
+    <label for="customerId" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+      >Customer Id</label
+    >
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+        class="form-control shadow-sm"
+        type="text"
+        name="customerId"
+        autocomplete="off"
+        [(ngModel)]="car.customerId"
+        placeholder="Customer Id"
+        disabled
+      />
+    </div>
+
+    <label for="customerName" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+      >Owner</label
+    >
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+        class="form-control shadow-sm"
+        type="text"
+        name="customerName"
+        autocomplete="off"
+        [(ngModel)]="model.customer.name"
+        placeholder="Owner"
+        disabled
+      />
+    </div>
+
+    <label for="brand" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+      >Brand</label
+    >
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+        class="form-control shadow-sm"
+        type="text"
+        name="brand"
+        autocomplete="off"
+        [(ngModel)]="car.brand"
+        placeholder="Brand"
+      />
+    </div>
+
+    <label for="model" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+      >Model</label
+    >
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+        class="form-control shadow-sm"
+        type="text"
+        name="model"
+        autocomplete="off"
+        [(ngModel)]="car.model"
+        placeholder="model"
+      />
+    </div>
+
+    <label for="year" class="col-sm-2 col-form-label text-end mt-2 mb-2"
+      >Year</label
+    >
+    <div class="col-sm-10 mt-2 mb-2">
+      <input
+        class="form-control shadow-sm"
+        type="text"
+        name="year"
+        autocomplete="off"
+        [(ngModel)]="car.year"
+        placeholder="Year"
+      />
+    </div>
+  </div>
+
+  <button class="btn btn-success shadow me-2 mt-2">Update</button>
+</form>

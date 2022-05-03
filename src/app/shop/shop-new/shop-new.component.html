@@ -1,0 +1,34 @@
+<h1 class="text-center">Nuevo Taller</h1>
+
+<form #form="ngForm" (ngSubmit)="addShop()">
+  <div class="container">
+    <input
+      class="form-control shadow-sm mt-3"
+      type="text"
+      name="name"
+      autocomplete="off"
+      [(ngModel)]="model.name"
+      placeholder="Name"
+    />
+
+    <input
+      class="form-control shadow-sm mt-3"
+      type="text"
+      name="address"
+      autocomplete="off"
+      [(ngModel)]="model.address"
+      placeholder="Address"
+    />
+
+    <input
+      class="form-control shadow-sm mt-3"
+      type="text"
+      name="rating"
+      autocomplete="off"
+      [(ngModel)]="model.rating"
+      placeholder="Rating"
+    />
+  </div>
+
+  <button class="btn btn-success shadow-sm me-2 mt-2">Add car</button>
+</form>
